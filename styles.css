@@ -26,3 +26,68 @@ header{background:#100f27e8;backdrop-filter:blur(12px)}
 .team-names{margin:14px 0}.team-names>label{display:block;font-size:10px;font-weight:800;color:#d0c8ff;margin:10px 0}
 .team-names .addword input{min-width:0;width:50%}
 @media(min-width:560px){.mode-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* First-run welcome and four-step illustrated onboarding inspired by the original neon-cartoon concept */
+:root{--cyan:#13d9f4;--electric-blue:#168bff;--hot-pink:#ff35b8;--lime:#52ff35;--gold:#ffd44a}
+body{background:radial-gradient(ellipse at 10% 15%,#182e75 0,transparent 38%),radial-gradient(ellipse at 95% 35%,#501a79 0,transparent 38%),linear-gradient(155deg,#090d28,#171037 65%,#090d25)}
+.welcome-screen{max-width:430px;margin:0 auto;text-align:center;padding:10px 8px 20px;border:1px solid #a28bff55;border-radius:25px;background:linear-gradient(155deg,#101a4bdb,#1d0c40e8);box-shadow:0 0 35px #4e44ff25,inset 0 0 30px #ffffff06;overflow:hidden}
+.welcome-logo{position:relative;padding:16px 0 2px;text-shadow:0 4px 0 #5a2454,0 0 24px #ffbb36a8}
+.logo-word{font-family:'Space Grotesk',sans-serif;font-size:clamp(42px,12vw,64px);font-weight:900;letter-spacing:-3px;line-height:1;color:#ffcf42;-webkit-text-stroke:1px #fff3b5;filter:drop-shadow(0 3px 0 #a83b26)}
+.logo-sub{display:inline-block;background:linear-gradient(#54332b,#201c2c);border:2px solid #f9d69c;border-radius:8px;padding:3px 14px;font-size:13px;font-weight:900;transform:rotate(-3deg);margin-top:3px;color:#fff4db}
+.crown{color:#ffdf38;font-size:26px;height:20px;line-height:20px;text-shadow:0 2px #b65030}
+.welcome-art{height:245px;overflow:hidden;margin:0 -8px;position:relative;mask-image:linear-gradient(to bottom,#000 80%,transparent)}
+.welcome-art img{width:100%;height:100%;object-fit:cover;object-position:center 45%;filter:saturate(1.12);mix-blend-mode:screen}
+.welcome-screen h1{font-size:clamp(27px,7vw,36px);line-height:1.12;margin:0 10px 9px;color:#fff;text-shadow:0 3px 0 #3d3b88;letter-spacing:-.8px}
+.welcome-prompt{font-size:12px;color:#e0ddff;margin:14px 0 10px}
+.welcome-languages{display:grid;gap:10px;padding:0 18px 10px}
+.welcome-languages button{min-height:58px;border:2px solid #63dfff;border-radius:19px;background:linear-gradient(110deg,#087cff,#18b6ff);box-shadow:0 4px 0 #194dba,0 0 20px #139bff45;display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:900;color:#fff;text-shadow:0 2px #1753b6}
+.welcome-languages button+button{border-color:#dc70ff;background:linear-gradient(110deg,#8c28f8,#d72be6);box-shadow:0 4px 0 #6926aa,0 0 20px #c32fff38;text-shadow:0 2px #6e249e}
+.welcome-languages button span{font-size:26px}
+body:has(#welcome.active) header,body:has(#welcome.active) footer{display:none}
+body:has(#welcome.active) main{width:min(100% - 20px,450px);padding:12px 0 20px;min-height:100svh;display:flex;align-items:center}
+body:has(#welcome.active) #welcome{width:100%}
+.tutorial-screen{max-width:430px;margin:0 auto;padding:12px;border:1px solid #a78bfa55;border-radius:22px;background:linear-gradient(155deg,#111d4beF,#1e1039f5);box-shadow:0 0 28px #664aff22;min-height:min(760px,calc(100svh - 25px));display:none;flex-direction:column}
+.tutorial-screen.active{display:flex}
+.tutorial-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+#tutorialCount{min-width:82px;border:1px solid #65bfff99;border-radius:30px;padding:7px 15px;text-align:center;font-weight:900;font-size:13px;background:#111e4e}
+.tutorial-skip{border:1px solid #ffffff2c;background:#ffffff0b;color:#ddd8ff;border-radius:22px;padding:8px 12px;font-size:11px;font-weight:700}
+.tutorial-visual{height:clamp(250px,42svh,380px);border-radius:17px;overflow:hidden;background:radial-gradient(ellipse,#3c3b9b,#121841);display:flex;align-items:center;justify-content:center}
+.tutorial-visual img{width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:illustrationPop .4s ease both}
+@keyframes illustrationPop{from{opacity:.4;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+.tutorial-copy{text-align:center;padding:16px 6px 6px}
+.tutorial-copy h2{font-size:clamp(22px,6vw,29px);line-height:1.16;margin:0 0 9px;letter-spacing:-.6px}
+.tutorial-copy p{font-size:13px;line-height:1.5;margin:0 auto;max-width:340px;color:#fff}
+.tutorial-copy .tutorial-english{font-size:11px;color:#c6c4e8;margin-top:8px}
+.tutorial-dots{display:flex;justify-content:center;gap:8px;padding:13px}
+.tutorial-dots i{width:9px;height:9px;border-radius:50%;background:#6d6a92;display:block}
+.tutorial-dots i.on{background:#15c8ff;box-shadow:0 0 12px #15c8ff}
+.tutorial-controls{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:auto;padding-top:8px}
+.tutorial-controls button{min-height:48px;border-radius:16px;font-size:13px}
+.tutorial-controls .primary{color:white;background:linear-gradient(110deg,#087cff,#00b9ff);box-shadow:0 4px 0 #0754b7,0 0 18px #0e91ff32}
+.tutorial-controls .secondary{background:#191c43;border-color:#8f8acb66}
+.tutorial-controls button:disabled{opacity:.35}
+body:has(#tutorial.active) header,body:has(#tutorial.active) footer{display:none}
+body:has(#tutorial.active) main{width:min(100% - 18px,450px);padding:10px 0;min-height:100svh}
+@media(min-width:600px){.welcome-screen{padding:18px}.welcome-art{height:280px}.tutorial-screen{padding:16px}.tutorial-visual{height:350px}}
+@media(max-height:700px){.welcome-art{height:180px}.tutorial-visual{height:clamp(190px,34svh,260px)}.tutorial-copy{padding-top:10px}.tutorial-copy h2{font-size:23px}}
+.brand{display:flex;align-items:center;gap:6px;letter-spacing:1px;font-size:14px;text-shadow:0 2px 0 #51265e}.brand>b{display:inline-grid;place-items:center;background:linear-gradient(140deg,#ffe36d,#ff8c59 55%,#ff66b6);color:#25133d;box-shadow:0 0 18px #ff78b74d}.brand>small{display:block;font-size:7px;letter-spacing:1.2px;color:#d8d4ff;line-height:1.1;margin-left:-2px}.hero-character-art{width:min(90%,320px);height:220px;object-fit:contain;object-position:center;filter:drop-shadow(0 0 22px #e77dff4a);animation:bob 3s ease-in-out infinite;z-index:1}.hero-art{overflow:hidden;border-radius:22px;border-color:#22d8ff99;background:radial-gradient(ellipse at 50% 0%,#3b4fbb,#29215d 58%,#191635);box-shadow:0 0 34px #16d9f440,inset 0 0 45px #9a7cff12}.hero-art .emoji-person{display:none}
+
+
+/* Permanent Sharades - Party Challenge art direction: neon, playful cartoon, glossy buttons */
+:root{--cyan:#13d9f4;--electric-blue:#168bff;--hot-pink:#ff35b8;--lime:#52ff35;--gold:#ffd44a}
+.logo-word{font-family:'Trebuchet MS','Arial Rounded MT Bold',sans-serif;font-weight:1000;letter-spacing:-2.5px;color:#ffd63e;-webkit-text-stroke:2px #fff2ad;text-shadow:0 3px 0 #a83c26,0 6px 0 #572342,0 0 22px #ffb52e88}
+.logo-sub{background:linear-gradient(#694638,#25192b);border-color:#ffe5ad;box-shadow:0 3px 0 #6a2e49;color:#fff7e9}
+.welcome-screen{border:2px solid #7064ce;border-radius:18px;background:linear-gradient(160deg,#101c50f5,#1d0b3ef5);box-shadow:0 0 28px #405bff38,inset 0 0 26px #ffffff07}
+.welcome-art{height:clamp(205px,31svh,285px);mask-image:linear-gradient(to bottom,#000 88%,transparent)}
+.welcome-art img{mix-blend-mode:normal;object-fit:cover;object-position:center 44%;filter:saturate(1.12) contrast(1.02)}
+.welcome-languages button{border-radius:22px;min-height:58px;background:linear-gradient(110deg,#087cff,#13b9ff);border-color:#54e4ff;box-shadow:0 4px 0 #164ab0,0 0 22px #139bff45}
+.welcome-languages button+button{background:linear-gradient(110deg,#8428f7,#d62be7);border-color:#e79aff;box-shadow:0 4px 0 #6926aa,0 0 20px #c32fff38}
+.tutorial-screen{border:2px solid #4d58b4;background:linear-gradient(160deg,#101b4beF,#21103ff5);box-shadow:0 0 32px #514cff30}
+.tutorial-visual{border:1px solid #7d82f1;border-radius:15px;box-shadow:inset 0 0 22px #0a0d2c;position:relative}
+.tutorial-visual img{object-fit:cover;object-position:center 42%;filter:saturate(1.1);animation:illustrationPop .42s cubic-bezier(.2,.8,.2,1) both}
+.tutorial-copy h2{text-shadow:0 2px 0 #28205c}
+.tutorial-controls .primary{border:1px solid #41dfff;background:linear-gradient(110deg,#087cff,#0bbdff);box-shadow:0 4px 0 #0754b7,0 0 18px #0e91ff32}
+.tutorial-complete .tutorial-controls .primary{background:linear-gradient(110deg,#15c935,#58ff3b);border-color:#9aff8b;color:#fff;text-shadow:0 2px #168c2d;box-shadow:0 4px 0 #168c2d,0 0 22px #43ff3850}
+.tutorial-complete #tutorialCount{border-color:#54ff65;background:#123e35}
+.primary:active,.secondary:active,.welcome-languages button:active{transform:translateY(2px);filter:brightness(1.12)}
+@media(max-height:700px){.welcome-art{height:clamp(160px,28svh,205px)}}
