@@ -23,3 +23,9 @@ In the app settings, enter the Supabase project URL and a **public anon/publisha
 Never expose a service-role key or AI provider secret in the frontend. The Edge Function must enforce its own authentication and request validation. Adjust the request schema in `app.js` if your existing function expects different fields.
 
 This is a fresh implementation and does not include proprietary source/assets from the old Rezone project. AI generation requires a working Supabase function; the game itself works without AI.
+
+
+## Neon update package
+This update restores a brighter neon/cartoon visual direction, adds selectable game-mode cards, team-name fields, and double-point / sudden-death behavior while preserving the existing mobile PWA structure.
+Upload the updated files in the repository root. GitHub Pages deploys from the configured Actions workflow.
+AI word generation remains optional and requires a working Supabase Edge Function plus a public anon/publishable key configured inside app settings. Never place a service-role secret in frontend code.
