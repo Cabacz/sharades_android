@@ -1,1 +1,20 @@
-{"name":"Sharades - Party Challenge","short_name":"Sharades","description":"Sharades - Party Challenge: kreslená party hra šarád","lang":"cs","start_url":"./","scope":"./","display":"standalone","orientation":"portrait","background_color":"#100f27","theme_color":"#111322","icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "name": "Sharades – Party Challenge",
+  "short_name": "Sharades",
+  "description": "Neonová party hra šarád",
+  "lang": "cs",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#100b31",
+  "theme_color": "#100b31",
+  "icons": [
+    {
+      "src": "./menu/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
