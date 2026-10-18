@@ -15,3 +15,26 @@ main{flex:1;padding:8px 0 24px}footer{display:flex;justify-content:space-between
 @media(min-width:540px){.app-shell{padding-left:26px;padding-right:26px}.hero{padding-top:24px}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.tutorial-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.home-tiles{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-stage .heroes img{height:138px;width:110px}}
 @media(max-width:360px){.app-shell{padding-left:10px;padding-right:10px}.home-tiles{grid-template-columns:1fr}.hero-stage{padding:14px}.brand small{letter-spacing:1px}.icon-btn{min-width:40px;padding:8px}}
 @media(prefers-reduced-motion:no-preference){.hero-stage .heroes img{animation:character-bob 3.8s ease-in-out infinite}.hero-stage .heroes img:nth-child(2){animation-delay:.3s}.hero-stage .heroes img:nth-child(3){animation-delay:.6s}@keyframes character-bob{50%{transform:translateY(-4px)}}}
+
+/* Category palette and home-menu colours echo the supplied party-game concept */
+.hero > .btn{background:linear-gradient(100deg,#43ef7a,#b4ff55);border-color:#d4ff9c;color:#073a5d;box-shadow:0 6px 0 #168c58,0 12px 25px #32f08026;text-shadow:0 1px #d5ffac}
+.home-tiles [data-screen="categories"]{background:linear-gradient(145deg,#10b6e7,#0869bb);border-color:#54e7ff}
+.home-tiles [data-screen="players"]{background:linear-gradient(145deg,#098dd4,#124fa3);border-color:#48d7ff}
+.home-tiles [data-screen="ai"]{background:linear-gradient(145deg,#ff9d2e,#e65b24);border-color:#ffd36a}
+.home-tiles [data-screen="custom"]{background:linear-gradient(145deg,#ff5bce,#a72ed4);border-color:#ff9be9}
+.home-tiles [data-screen="settings"]{background:linear-gradient(145deg,#f45eaa,#c42b85);border-color:#ffaddd}
+.home-tiles [data-screen="tutorial"]{background:linear-gradient(145deg,#9c68ff,#5e4bdd);border-color:#c4a8ff}
+.home-tiles [data-screen="stats"]{background:linear-gradient(145deg,#167ce0,#174aa6);border-color:#65d9ff}
+.home-tiles [data-screen="achievements"]{background:linear-gradient(145deg,#ffbd36,#e87824);border-color:#ffe47b}
+.home-tiles [data-screen="avatars"]{background:linear-gradient(145deg,#15c4a1,#087e95);border-color:#69ffdc}
+.home-tiles [data-screen="offline"]{background:linear-gradient(145deg,#1d83df,#2347a8);border-color:#7acaff}
+.home-tiles [data-screen="about"]{background:linear-gradient(145deg,#3273bd,#234178);border-color:#7cc8ff}
+.grid button[data-toggle-category]{min-height:120px}
+.grid button[data-toggle-category]:nth-child(8n+1){background:linear-gradient(145deg,#0da7e5,#0867bc);border-color:#50dcff}
+.grid button[data-toggle-category]:nth-child(8n+2){background:linear-gradient(145deg,#45dc83,#159e70);border-color:#9bffb9}
+.grid button[data-toggle-category]:nth-child(8n+3){background:linear-gradient(145deg,#b277ff,#684ce0);border-color:#d6b4ff}
+.grid button[data-toggle-category]:nth-child(8n+4){background:linear-gradient(145deg,#ffb74a,#ef792c);border-color:#ffe1a1}
+.grid button[data-toggle-category]:nth-child(8n+5){background:linear-gradient(145deg,#ff6fbd,#cf408e);border-color:#ffc0e5}
+.grid button[data-toggle-category]:nth-child(8n+6){background:linear-gradient(145deg,#31c5df,#137cba);border-color:#8ff5ff}
+.grid button[data-toggle-category]:nth-child(8n+7){background:linear-gradient(145deg,#95d957,#419e4c);border-color:#d5ff9d}
+.grid button[data-toggle-category]:nth-child(8n+8){background:linear-gradient(145deg,#ffd35b,#ec9b2e);border-color:#fff0a0}
