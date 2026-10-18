@@ -1,0 +1,10 @@
+/* Sharades title-screen splash. The generated artwork is hosted as a versioned image URL. */
+:root{--sh-splash-bg:#090522}
+#sharadesSplash{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#3a0c83 0,#12083a 48%,#050414 100%);cursor:pointer;touch-action:manipulation;user-select:none;-webkit-tap-highlight-color:transparent}
+#sharadesSplash[hidden]{display:none}
+#sharadesSplash .splash-art{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:transparent}
+#sharadesSplash .splash-hint{position:absolute;left:50%;bottom:max(20px,env(safe-area-inset-bottom));transform:translateX(-50%);padding:11px 18px;border:1px solid #ffffff55;border-radius:999px;background:#16083bd9;color:#fff;font:800 12px/1.2 system-ui,sans-serif;letter-spacing:.08em;text-align:center;text-shadow:0 2px 8px #000;box-shadow:0 0 22px #d72dff66;animation:shSplashPulse 1.8s ease-in-out infinite;white-space:nowrap;pointer-events:none}
+#sharadesSplash .splash-hint:after{content:"  ›"}
+@keyframes shSplashPulse{0%,100%{opacity:.78;transform:translate(-50%,0)}50%{opacity:1;transform:translate(-50%,-4px)}}
+@media (max-aspect-ratio: 9/16){#sharadesSplash .splash-art{object-fit:cover}}
+@media (prefers-reduced-motion:reduce){#sharadesSplash .splash-hint{animation:none}}
