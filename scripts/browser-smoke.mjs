@@ -21,9 +21,16 @@ try {
 
   await page.locator('[data-screen="tutorial"]').click();
   assert.equal(await page.locator('.tutorial-gallery figure').count(), 5, 'Illustrated tutorial renders five panels');
-  const tutorialImagesLoaded = await page.locator('.tutorial-gallery img').evaluateAll((imgs) =>
-    imgs.length === 5 && imgs.every((img) => img.complete && img.naturalWidth > 0));
-  assert.equal(tutorialImagesLoaded, true, 'Tutorial images load');
+  const tutorialImages = page.locator('.tutorial-gallery img');
+  for (let i = 0; i < 5; i++) {
+    const image = tutorialImages.nth(i);
+    await image.scrollIntoViewIfNeeded();
+    const loaded = await image.evaluate(async (img) => {
+      await img.decode();
+      return img.naturalWidth > 0;
+    });
+    assert.equal(loaded, true, `Tutorial image ${i + 1} loads`);
+  }
   await page.locator('[data-action="home"]').click();
 
   await page.locator('[data-screen="players"]').click();
