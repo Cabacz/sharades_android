@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const splash=document.getElementById('sharadesSplash');
-const artwork='https://cdn.openart.ai/openart-uploads/production/attachment-transfers/3ab4fdd85b416034451123fb95bce2789a4ff7fe5a61c8c5df12938ed8aa2d13.png';
+const artwork='assets/images/title-screen-en.png';
 const splashImage=splash?.querySelector('.splash-art'); if(splashImage)splashImage.src=artwork;
 if(!splash)return;
 let opened=false;
