@@ -1,0 +1,27 @@
+name: Validate Sharades PWA
+
+on:
+  push:
+    branches:
+      - fix/release-gameplay
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/app.js
+          node --check js/words.js
+          node --check service-worker.js
+      - name: Validate local app assets and dictionary
+        run: node scripts/validate.mjs
