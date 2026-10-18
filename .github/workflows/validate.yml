@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - fix/release-gameplay
+      - redesign/cartoon-blue-ui
   pull_request:
     branches:
       - main

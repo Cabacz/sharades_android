@@ -39,6 +39,26 @@ try {
   assert.equal(await page.locator('.player .name').filter({ hasText: 'Browser Test' }).count(), 1, 'A player can be added');
   await page.locator('[data-action="home"]').click();
 
+  await page.locator('[data-screen="avatars"]').click();
+  await page.locator('[data-pick-avatar="robot"]').click();
+  assert.match(await page.locator('.select-card.selected img').first().getAttribute('src'), /avatar-robot\.svg/, 'Avatar selection saves to a player');
+  await page.locator('[data-action="home"]').click();
+
+  await page.locator('[data-screen="ai"]').click();
+  await page.locator('#aiTopic').fill('Zvířata');
+  await page.locator('[data-action="generate-local"]').click();
+  assert.equal(await page.locator('[data-generated-index]').count(), 10, 'Local word generator creates the requested number of suggestions');
+  await page.locator('[data-action="add-generated"]').click();
+  assert.equal(await page.locator('#customText').inputValue().then(v => v.split('\n').filter(Boolean).length), 10, 'Generated suggestions can be added to custom words');
+  await page.locator('[data-action="home"]').click();
+
+  await page.locator('[data-screen="achievements"]').click();
+  assert.equal(await page.locator('.feature-row').count(), 5, 'Achievements screen renders five achievements');
+  await page.locator('[data-action="home"]').click();
+  await page.locator('[data-screen="offline"]').click();
+  assert.equal(await page.locator('.feature-row').count(), 3, 'Offline status screen renders its checks');
+  await page.locator('[data-action="home"]').click();
+
   await page.locator('[data-action="setup"]').click();
   await page.locator('[data-category="Zvířata"]').click();
   await page.locator('[data-action="begin"]').click();
@@ -64,7 +84,7 @@ try {
   }
   assert.equal(await page.locator('.scoreboard .score-row').count(), 2, 'Final scoreboard renders both teams');
   assert.equal(runtimeErrors.length, 0, `No uncaught browser errors: ${runtimeErrors.join('; ')}`);
-  console.log('Interactive browser smoke test passed: language toggle, assets, tutorial, player creation, word reveal, scoring, and round progression.');
+  console.log('Interactive browser smoke test passed: language toggle, assets, tutorial, player creation, avatar selection, local word generation, achievements, offline screen, word reveal, scoring, and round progression.');
 } finally {
   await browser.close();
 }
