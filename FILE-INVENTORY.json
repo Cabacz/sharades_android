@@ -1,0 +1,97 @@
+[
+  {
+    "path": ".nojekyll",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "README-CZ.md",
+    "bytes": 2113,
+    "sha256": "4ad983157af3cf17ff021037f667d2b5ab5c40846ae675e1eb0419531d9e5e54"
+  },
+  {
+    "path": "README.md",
+    "bytes": 138,
+    "sha256": "7ca739aeffff8bedfdeeac9a61d4012be3667252c9076b4c13eb3e5925aed1f0"
+  },
+  {
+    "path": "TESTOVACI_CHECKLIST_CZ.md",
+    "bytes": 701,
+    "sha256": "52e25c15ca6d9998fa6ec098460de0d192ebb2abbb648f000121799b1ce21a4f"
+  },
+  {
+    "path": "assets/avatar-cat.svg",
+    "bytes": 851,
+    "sha256": "fa7d21185b42fc5ddef4d89e9b6baef13ea92267f5e5176aa3dd9baf5c747194"
+  },
+  {
+    "path": "assets/avatar-child.svg",
+    "bytes": 915,
+    "sha256": "ddb1a7451cfdf04af2017234d0033a040d26b6ade1514a6fddf18c3819b77ac5"
+  },
+  {
+    "path": "assets/avatar-man.svg",
+    "bytes": 1065,
+    "sha256": "0e826d1bd99faf54bd454417a450e58b05a9e8e74a7f76b97c9a8a9e45a800b3"
+  },
+  {
+    "path": "assets/avatar-robot.svg",
+    "bytes": 749,
+    "sha256": "58814d3fdc7b9c02021bf1cf10eea98c8034c7d414a216d06852f9473c7d92f3"
+  },
+  {
+    "path": "assets/avatar-woman.svg",
+    "bytes": 996,
+    "sha256": "e263a3a3fd20868b079472924dc754eb47220456e6faa54a36c11e56b1bbbc78"
+  },
+  {
+    "path": "assets/character-reference-1.jpg",
+    "bytes": 271062,
+    "sha256": "ba337de175848cd6fe7edd88e0d085ca8cec1061efb7f3f82660dd464a94fd39"
+  },
+  {
+    "path": "assets/character-reference-2.jpg",
+    "bytes": 361345,
+    "sha256": "7d2491a2f36f189d1a0f06f9207861b5265ac9e7feab46d62976398615622a1a"
+  },
+  {
+    "path": "assets/design-reference-ui.png",
+    "bytes": 2329431,
+    "sha256": "219b5209076b648fd2c7d5a3919586efad14d300c9a71fd93af8b3c7c472ffb0"
+  },
+  {
+    "path": "assets/logo.svg",
+    "bytes": 949,
+    "sha256": "ffb8e0a6a24c9948ad6ff7e62446193dc4aeae50de2a27e1676b542a11f3d337"
+  },
+  {
+    "path": "css/style.css",
+    "bytes": 9265,
+    "sha256": "75081d92f5d205a9de245d98b64415d2ebe653e7cc24240744d7fb14e7472f93"
+  },
+  {
+    "path": "index.html",
+    "bytes": 1481,
+    "sha256": "8966b02bfe2c08aebdb3df17779eb926353ec137385cb466c4dd88230abf5ad9"
+  },
+  {
+    "path": "js/app.js",
+    "bytes": 22279,
+    "sha256": "00218a7d7ab4ab4ab1a9cada26adfee6e01f703b6b6db9ab4142ddab7de734da"
+  },
+  {
+    "path": "js/words.js",
+    "bytes": 3142,
+    "sha256": "450dad44b14dc6fd04b346d98bd8c84fe66b7e718a34d0073cf173ae1aa8c755"
+  },
+  {
+    "path": "manifest.webmanifest",
+    "bytes": 434,
+    "sha256": "ff53916dce70a86d1167e594a5f3cbc058ab72813a9bdc19518289e13db22571"
+  },
+  {
+    "path": "service-worker.js",
+    "bytes": 967,
+    "sha256": "4f998ca15438965644a5f80369e53ed9820244adf5a3a88eb641ba590ed42b84"
+  }
+]
