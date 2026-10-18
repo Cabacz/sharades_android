@@ -41,7 +41,7 @@ try {
 
   await page.locator('[data-screen="avatars"]').click();
   await page.locator('[data-pick-avatar="robot"]').click();
-  assert.match(await page.locator('.player .avatar').first().getAttribute('src'), /avatar-robot\.svg/, 'Avatar selection saves to a player');
+  assert.match(await page.locator('.select-card.selected img').first().getAttribute('src'), /avatar-robot\.svg/, 'Avatar selection saves to a player');
   await page.locator('[data-action="home"]').click();
 
   await page.locator('[data-screen="ai"]').click();
