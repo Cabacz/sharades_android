@@ -8,3 +8,5 @@
 @keyframes shSplashPulse{0%,100%{opacity:.78;transform:translate(-50%,0)}50%{opacity:1;transform:translate(-50%,-4px)}}
 @media (max-aspect-ratio: 9/16){#sharadesSplash .splash-art{object-fit:cover}}
 @media (prefers-reduced-motion:reduce){#sharadesSplash .splash-hint{animation:none}}
+
+#sharadesSplash .splash-controls{position:absolute;top:max(14px,env(safe-area-inset-top));left:14px;z-index:2;pointer-events:auto}#sharadesSplash .splash-controls button{border:1px solid #ffffff70;border-radius:12px;padding:9px 12px;background:#16083be8;color:#fff;font:800 12px/1.2 system-ui,sans-serif;box-shadow:0 0 16px #d72dff44;cursor:pointer}
