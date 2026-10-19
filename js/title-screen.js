@@ -1,8 +1,16 @@
 (()=>{'use strict';
 const splash=document.getElementById('sharadesSplash');
 const artwork='assets/images/title-screen-en.png';
+const splashLangButton=document.getElementById('splashLangBtn');
+const mainLangButton=document.getElementById('langBtn');
+function syncSplashLanguage(){if(splashLangButton&&mainLangButton)splashLangButton.textContent=mainLangButton.textContent;}
+if(splashLangButton&&mainLangButton){syncSplashLanguage();splashLangButton.addEventListener('click',event=>{event.stopPropagation();mainLangButton.click();syncSplashLanguage();});mainLangButton.addEventListener('click',()=>{syncSplashLanguage();});}
 const splashImage=splash?.querySelector('.splash-art'); if(splashImage)splashImage.src=artwork;
 if(!splash)return;
+const splashHint=splash.querySelector('.splash-hint');
+function syncSplashHint(){if(splashHint&&mainLangButton)splashHint.textContent=mainLangButton.textContent.includes('EN')?'Tap anywhere to start tutorial':'Klepni kamkoli a spusť tutoriál';}
+syncSplashHint();
+mainLangButton?.addEventListener('click',syncSplashHint);
 let opened=false;
 function startTutorial(){
  if(opened)return;
