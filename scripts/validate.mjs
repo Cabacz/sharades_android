@@ -44,5 +44,8 @@ for (const key of ['beginGame', 'nextTurn', 'finishTurn', 'finishGame', 'renderG
 }
 assert(app.includes("round:'Tah'") && app.includes("round:'Turn'"), 'round label is translated in both languages');
 assert(app.includes('tutorial-gallery') && css.includes('.tutorial-gallery'), 'illustrated tutorial has matching styles');
+assert(app.includes('functions/v1/generate-words'), 'remote AI calls the Supabase generate-words function');
+assert(app.includes('supabaseUrl') && app.includes('supabaseKey'), 'Supabase URL and public key can be configured in settings');
+assert(!/service[_-]?role|sb_secret_/i.test(app), 'frontend does not contain a Supabase secret or service-role key');
 assert(html.includes('js/app.js') && html.includes('js/words.js') && html.includes('service-worker.js'), 'app scripts and offline worker are wired in HTML');
 console.log(`Sharades validation passed: ${checks.length} checks.\n- ${checks.join('\n- ')}`);
