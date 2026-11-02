@@ -1,0 +1,18 @@
+{
+  "name": "sharades-party-challenge",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Sharades Party Challenge - bilingual charades game",
+  "scripts": {
+    "android:prepare": "node scripts/prepare-android.mjs",
+    "android:add": "cap add android",
+    "android:sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "7.4.3",
+    "@capacitor/core": "7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "7.4.3"
+  }
+}

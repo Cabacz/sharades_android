@@ -46,6 +46,8 @@ try {
 
   await page.locator('[data-screen="ai"]').click();
   await page.locator('#aiTopic').fill('Zvířata');
+  await page.locator('[data-action="generate-ai"]').click();
+  assert.match(await page.locator('#aiStatus').innerText(), /Supabase URL/, 'Remote AI explains that Supabase settings are required');
   await page.locator('[data-action="generate-local"]').click();
   assert.equal(await page.locator('[data-generated-index]').count(), 10, 'Local word generator creates the requested number of suggestions');
   await page.locator('[data-action="add-generated"]').click();

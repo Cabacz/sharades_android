@@ -1,0 +1,8 @@
+{
+  "appId": "cz.cabacz.sharades",
+  "appName": "Sharades Party Challenge",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  }
+}
